@@ -1,7 +1,8 @@
+---
 - authorized_key:
-    user: fuser
+    user: "{{ fuser }}"
     state: present
-    key: "{{ lookup('file', '/home/fuser/.ssh/id_rsa.pub') }}"
+    key: "{{ lookup('file', '/home/{{ fuser }}/.ssh/id_rsa.pub') }}"
     manage_dir: yes
   become: yes
   become_method: su
