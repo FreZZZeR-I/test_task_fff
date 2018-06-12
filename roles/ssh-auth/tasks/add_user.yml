@@ -1,0 +1,4 @@
+- user: 
+    name: fuser
+  become: yes
+  become_method: su

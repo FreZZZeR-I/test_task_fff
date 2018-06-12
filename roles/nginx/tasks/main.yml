@@ -1,0 +1,5 @@
+- include: install_nginx.yml
+- include: set_backend_index.yml
+  when: "'backends' in group_names"
+- include: set_balancer_config.yml
+  when: "'balancers' in group_names"

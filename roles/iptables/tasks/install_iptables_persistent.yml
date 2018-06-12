@@ -1,0 +1,12 @@
+- apt: 
+    name: "iptables-persistent"
+    state: present
+  become: yes
+  become_method: su
+#- debconf: 
+#    name: iptables-persistent
+#    question: iptables-persistent/autosave_v4
+#    value: true
+#    vtype: boolean
+#  become: yes
+#  become_method: su

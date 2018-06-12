@@ -1,0 +1,12 @@
+- copy: 
+   src: nginx_balancer_config.conf
+   dest: /etc/nginx/nginx.conf
+   owner: www-data 
+   group: www-data 
+   mode: 0644
+  become: yes
+  become_method: su
+- shell: /etc/init.d/nginx restart
+  become: yes
+  become_method: su
+

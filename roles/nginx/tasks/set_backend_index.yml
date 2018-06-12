@@ -1,0 +1,8 @@
+- copy: 
+   src: backend_index.html
+   dest: /var/www/html/index.html
+   owner: www-data 
+   group: www-data 
+   mode: 0644
+  become: yes
+  become_method: su

@@ -1,0 +1,20 @@
+- copy: 
+   src: iptables_rules.v4
+   dest: /etc/iptables/rules.v4
+   owner: root
+   group: root
+   mode: 0640
+  become: yes
+  become_method: su
+- copy: 
+   src: iptables_rules.v6
+   dest: /etc/iptables/rules.v6
+   owner: root
+   group: root
+   mode: 0640
+  become: yes
+  become_method: su
+- shell: netfilter-persistent reload
+  become: yes
+  become_method: su
+

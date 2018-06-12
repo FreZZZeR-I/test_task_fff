@@ -1,0 +1,6 @@
+[balancers]
+balancer ansible_ssh_host=10.0.1.200 ansible_ssh_port=22 ansible_ssh_user='vagrant' ansible_ssh_private_key_file='./.vagrant/machines/balancer/libvirt/private_key'
+[backends]
+backend1 ansible_ssh_host=10.0.1.201 ansible_ssh_port=22 ansible_ssh_user='vagrant' ansible_ssh_private_key_file='./.vagrant/machines/backend1/libvirt/private_key'
+backend2 ansible_ssh_host=10.0.1.202 ansible_ssh_port=22 ansible_ssh_user='vagrant' ansible_ssh_private_key_file='./.vagrant/machines/backend2/libvirt/private_key'
+
